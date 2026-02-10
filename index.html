@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nardos Teshager | Data Analyst</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f0fdf4;
+      color: #092111;
+      line-height: 1.6;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      border-bottom: 3px solid #a7f3d0;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #a7f3d0, #092111);
+      color: white;
+      padding: 80px 20px;
+    }
+
+    .hero-container {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .profile-card {
+      background: #a7f3d0;
+      color: #092111;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      width: 260px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .profile-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 500px;
+    }
+
+    .intro h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .project-btn {
+      display: inline-block;
+      background: #092111;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 25px;
+      margin-top: 15px;
+      text-decoration: none;
+    }
+
+    /* SKILLS */
+    .skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .skills li {
+      list-style: none;
+      background: #a7f3d0;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+
+    /* PROJECTS */
+    .project-card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .project-card a {
+      color: #092111;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .project-card span {
+  display: block;
+  margin-top: 10px;
+}
+
+.project-card a {
+  display: block;
+  margin-top: 10px;
+}
+
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #092111;
+      color: #a7f3d0;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .intro h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="profile-card">
+        <img src="photo.jpg" alt="Profile Photo">
+        <h2>Nardos Teshager</h2>
+        <p>Data Analyst</p>
+      </div>
+
+      <div class="intro">
+        <h1>Hello</h1>
+        <p>
+          I’m a data analyst skilled in Excel, SQL, Python and Power BI.
+        </p>
+        <a class="project-btn" href="#projects">View Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>About Me</h2>
+    <p>
+     I am an Information Technology graduate with a Data Analysis certification from ALX Africa. I have hands-on experience using SQL, Excel, Power BI, Python, and data visualization. I enjoy turning data into clear insights that support decision-making. I am a good communicator and team player. I'm currently taking Data Science course on ALX Africa, excited about starting my career as a Data Analyst.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Excel</li>
+      <li>SQL</li>
+      <li>Python</li>
+      <li>Power BI</li>
+      <li>Data Cleaning</li>
+      <li>Data Visualization</li>
+    </ul>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+  <h3>Online Sales Analysis</h3>
+  <p>
+    Analyzed an online sales dataset using Excel to identify sales trends, product performance, and regional distribution.
+  <span>Tools: Excel</span>
+  <a href="https://github.com/narditesh/Online_Sales_Analysis" target="_blank">View Project</a>
+</div>
+
+
+   <div class="project-card">
+  <h3>Predicting House Prices</h3>
+  <p>
+    This project builds and evaluates machine learning models Linear Regression, Ridge Regression, and LASSO Regression to predict house prices based on different property features.
+  <span>Tools: Python</span>
+  <a href="https://github.com/narditesh/Predicting_House_Prices" target="_blank">View Project</a>
+</div>
+
+<div class="project-card">
+  <h3>Student_Performance_Prediction</h3>
+  <p>
+    The goal of this analysis is to explore the factors influencing student performance and predict outcomes using regression and classification models.
+    <span>Tools: Python</span>
+  <a href="https://github.com/narditesh/student_-performance_-prediction" target="_blank">View Project</a>
+</div>
+
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Nardos Teshager</p>
+  </footer>
+
+</body>
+</html>
