@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nardos Teshager - Data Analyst portfolio showcasing projects in SQL, Python, Excel, and Power BI.">
+  <title>Nardos Teshager | Data Analyst</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f0fdf4;
+      color: #092111;
+      line-height: 1.7;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 70px 25px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+      padding-bottom: 8px;
+      border-bottom: 3px solid #a7f3d0;
+      display: inline-block;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: #092111;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #a7f3d0, #092111);
+      color: white;
+      padding: 90px 20px;
+      text-align: center;
+    }
+
+    .hero-container {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .profile-card {
+      background: white;
+      color: #092111;
+      padding: 35px 25px;
+      border-radius: 24px;
+      text-align: center;
+      width: 280px;
+      box-shadow: 0 10px 30px rgba(9, 33, 17, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .profile-card img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 18px;
+      border: 4px solid #a7f3d0;
+    }
+
+    .profile-card h2 {
+      font-size: 1.5rem;
+      border: none;
+      padding: 0;
+      margin-bottom: 5px;
+    }
+
+    .profile-card h2::after {
+      display: none;
+    }
+
+    .profile-card p {
+      color: #092111;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    .intro {
+      max-width: 520px;
+      text-align: left;
+    }
+
+    .intro h1 {
+      font-size: 3.2rem;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    .intro p {
+      font-size: 1.15rem;
+      margin-bottom: 25px;
+      opacity: 0.95;
+    }
+
+    .project-btn {
+      display: inline-block;
+      background: #092111;
+      color: white;
+      padding: 12px 32px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(9, 33, 17, 0.3);
+    }
+
+    .project-btn:hover {
+      background: #06160b;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(9, 33, 17, 0.4);
+    }
+
+    /* ABOUT */
+    .about p {
+      font-size: 1.05rem;
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+      color: #092111;
+      opacity: 0.95;
+    }
+
+    /* SKILLS */
+    .skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      list-style: none;
+      padding: 10px 0;
+    }
+
+    .skills li {
+      background: white;
+      color: #092111;
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow: 0 3px 10px rgba(9, 33, 17, 0.1);
+      transition: all 0.2s ease;
+      border: 2px solid transparent;
+    }
+
+    .skills li:hover {
+      border-color: #a7f3d0;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(9, 33, 17, 0.15);
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .project-card {
+      background: white;
+      padding: 28px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(9, 33, 17, 0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 35px rgba(9, 33, 17, 0.2);
+    }
+
+    .project-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      color: #092111;
+    }
+
+    .project-card p {
+      flex-grow: 1;
+      margin-bottom: 15px;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .project-card span {
+      display: inline-block;
+      background: #a7f3d0;
+      color: #092111;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      width: fit-content;
+    }
+
+    .project-card a {
+      display: inline-block;
+      color: #092111;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 8px 0;
+      position: relative;
+      transition: color 0.2s;
+    }
+
+    .project-card a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #092111;
+      transition: width 0.3s ease;
+    }
+
+    .project-card a:hover::after {
+      width: 100%;
+    }
+
+    /* CONTACT */
+    .contact {
+      text-align: center;
+      background: white;
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 8px 25px rgba(9, 33, 17, 0.1);
+      margin: 20px auto;
+      max-width: 700px;
+    }
+
+    .contact a {
+      color: #092111;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 2px solid #a7f3d0;
+      padding-bottom: 2px;
+      transition: all 0.2s;
+    }
+
+    .contact a:hover {
+      color: #06160b;
+      border-color: #092111;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      background: #092111;
+      color: #a7f3d0;
+      font-size: 0.95rem;
+    }
+
+    /* FOCUS STATES FOR ACCESSIBILITY */
+    a:focus, button:focus, .project-btn:focus {
+      outline: 3px solid #092111;
+      outline-offset: 3px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .hero { padding: 70px 15px; }
+      .hero-container { flex-direction: column; text-align: center; }
+      .intro { text-align: center; max-width: 100%; }
+      .intro h1 { font-size: 2.4rem; }
+      .intro p { font-size: 1.05rem; }
+      section { padding: 50px 20px; }
+      .profile-card { width: 100%; max-width: 320px; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="profile-card">
+        <img src="photo.jpg" alt="Nardos Teshager, Data Analyst">
+        <h2>Nardos Teshager</h2>
+        <p>Data Analyst</p>
+      </div>
+
+      <div class="intro">
+        <h1>Hello 👋</h1>
+        <p>
+          I'm a Data Analyst skilled in Excel, SQL, Python and Power BI — turning complex data into clear, actionable insights.
+        </p>
+        <a class="project-btn" href="#projects">View My Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      I am an Information Technology graduate with a Data Analysis certification from ALX Africa. I have hands-on experience using SQL, Excel, Power BI, Python, and data visualization. I enjoy turning data into clear insights that support decision-making. I am a good communicator and team player. I'm currently taking a Data Science course at ALX Africa and excited about starting my career as a Data Analyst.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Excel</li>
+      <li>SQL</li>
+      <li>Python</li>
+      <li>Power BI</li>
+      <li>Data Cleaning</li>
+      <li>Data Visualization</li>
+      <li>Statistical Analysis</li>
+      <li>Machine Learning</li>
+    </ul>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3>📊 Online Sales Analysis</h3>
+        <p>Analyzed an online sales dataset using Excel to identify sales trends, product performance, and regional distribution patterns.</p>
+        <span>Tools: Excel</span>
+        <a href="https://github.com/narditesh/Online_Sales_Analysis" target="_blank" aria-label="View Online Sales Analysis project on GitHub">View Project →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>🏠 Predicting House Prices</h3>
+        <p>Built and evaluated machine learning models (Linear, Ridge, and LASSO Regression) to predict house prices based on property features.</p>
+        <span>Tools: Python</span>
+        <a href="https://github.com/narditesh/Predicting_House_Prices" target="_blank" aria-label="View Predicting House Prices project on GitHub">View Project →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>🎓 Student Performance Prediction</h3>
+        <p>Explored factors influencing student performance and built regression/classification models to predict academic outcomes.</p>
+        <span>Tools: Python</span>
+        <a href="https://github.com/narditesh/student_-performance_-prediction" target="_blank" aria-label="View Student Performance Prediction project on GitHub">View Project →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <h2>Let's Connect</h2>
+    <p style="margin: 15px 0 20px; opacity: 0.9;">
+       Open to Data Analyst roles, internships, or analytics projects. Have a question? I'd love to hear from you!
+</p>
+    </p>
+   <a href="mailto:nardosteshager@gmail.com">📧 Send me an email</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Nardos Teshager. </p>
+  </footer>
+
+</body>
+</html>
